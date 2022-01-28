@@ -1,0 +1,13 @@
+sudo ./apt-packages.sh
+./misc.sh
+
+if [$1 = '--docker']
+then
+    sudo ./docker-install.sh
+fi
+
+if [$1 = '--reboot'] || [$2 = '--reboot']
+then
+    sudo reboot
+fi
+
