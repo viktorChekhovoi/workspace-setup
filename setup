@@ -1,13 +1,31 @@
+
+sudo chmod +x apt-packages.sh docker-install.sh misc.sh vim.sh 
+
 sudo ./apt-packages.sh
+sudo ./vim.sh
 ./misc.sh
 
-if [$1 = '--docker']
+
+if [ $# -eq 1 ]
 then
-    sudo ./docker-install.sh
+    if [ $1 = '--docker' ]
+    then
+        sudo ./docker-install.sh
+    fi
+
+    if [ $1 = '--reboot' ]
+    then
+        sudo reboot
+    fi
 fi
 
-if [$1 = '--reboot'] || [$2 = '--reboot']
+if [ $# -eq 2 ]
 then
-    sudo reboot
+    if ([ $1 = '--reboot' ] && [ $2 = '--docker' ]) || ([ $2 = '--reboot' ] && [ $1 = '--docker' ])
+    then
+        sudo ./docker-install.sh
+        sudo reboot
+    fi
 fi
+    
 
