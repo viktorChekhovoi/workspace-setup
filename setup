@@ -3,6 +3,7 @@ sudo chmod +x apt-packages.sh docker-install.sh misc.sh vim.sh
 
 sudo ./apt-packages.sh
 sudo ./vim.sh
+sudo ./tmux.sh
 ./misc.sh
 
 
