@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 printf "\n\nInstalling apt packages...\n\n"
-sudo apt-get install python3-pip zip unzip wget tmux git screen htop vim iputils-ping nfs-common default-jre -y
+sudo apt-get install python3-pip zip unzip wget tmux git screen htop vim iputils-ping nfs-common default-jre terminator zsh fonts-powerline git -y
 
 
 

@@ -1,9 +1,10 @@
 
-sudo chmod +x apt-packages.sh docker-install.sh misc.sh vim.sh 
+sudo chmod +x apt-packages.sh docker-install.sh pip.sh vim.sh 
 
 sudo ./apt-packages.sh
-sudo ./vim.sh
-sudo ./tmux.sh
+./terminal.sh
+./vim.sh
+./tmux.sh
 ./misc.sh
 
 
@@ -29,4 +30,4 @@ then
     fi
 fi
     
-
+printf "\n\nFinished installing...\nPlease reboot your system\n\n"
