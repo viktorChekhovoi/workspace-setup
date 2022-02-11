@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode zsh-autosuggestions sudo web-search copydir copyfile copybuffer dirhistory history jsontools z bgnotify)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,7 +82,11 @@ export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+else
+   export EDITOR='mvim'
+fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -101,6 +105,9 @@ prompt_context() {}
 
 source /home/chekhovoiv/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
- #disable auto correct
- unsetopt correct_all
+#disable auto correct
+unsetopt correct_all
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+bindkey -e '^ ' forward-char
 
