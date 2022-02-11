@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode zsh-autosuggestions sudo web-search copydir copyfile copybuffer dirhistory history jsontools z bgnotify)
+plugins=(git vi-mode zsh-autosuggestions sudo web-search copydir copyfile copybuffer dirhistory history jsontools z bgnotify vscode command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 

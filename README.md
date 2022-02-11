@@ -58,4 +58,6 @@ This package helps set up a new work machine. It installs important apt and pip3
 - [```json tools```](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools) - ```pp_json``` prints the json in a nice format. ```is_json``` checks if the argument is in valid json format. ```urlencode_json``` returns a URL-encoded string for the json, ```urldecode_json``` retuns json from a URL-encoded string
 - [```z```](https://github.com/rupa/z) - ```z``` displays your most recent directories. 
 - [```bgnotify```](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/bgnotify) - useful for long tasks, notifies you when the task is done. 
+- [```vscode```](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode) - ```vcs```  opens the current folder in Visual Studio. ```vsca *dir*``` adds the directory to the last active window. 
+- [```command-not-found```](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found) - suggests packages to be installed if a package is not found
 
