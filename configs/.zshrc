@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode zsh-autosuggestions sudo web-search copydir copyfile copybuffer dirhistory history jsontools z bgnotify vscode command-not-found)
+plugins=(git zsh-autosuggestions sudo web-search copydir copyfile copybuffer dirhistory history jsontools z bgnotify vscode command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,3 +111,21 @@ unsetopt correct_all
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 bindkey -e '^ ' forward-char
 
+x-copy-region-as-kill () {
+  zle copy-region-as-kill
+    print -rn $CUTBUFFER | xsel -i -b
+}
+zle -N x-copy-region-as-kill
+x-kill-region () {
+  zle kill-region
+    print -rn $CUTBUFFER | xsel -i -b
+}
+zle -N x-kill-region
+x-yank () {
+  CUTBUFFER=$(xsel -o -b </dev/null)
+    zle yank
+}
+zle -N x-yank
+bindkey -e '\ew' x-copy-region-as-kill
+bindkey -e '^W' x-kill-region
+bindkey -e '^Y' x-yank
