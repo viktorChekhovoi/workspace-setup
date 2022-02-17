@@ -44,7 +44,7 @@ This package helps set up a new work machine. It installs important apt and pip3
 - Prefix changed to ```Control + a```. Recommend to change your CAPS LOCK key to Control. Use prefix + character as a command (e. g., prefix + ```x``` closes a window)
 - Use ```-``` to split a window horizontally and ```\``` or ```|``` to split vertically
 - Switch between windows with arrow keys or mouse
-- ```x``` or ```backspace``` close a window, ```del``` stop tmux immediately
+- ```x``` or ```backspace``` closes a window, ```del``` stops tmux immediately
 - ```n``` opens a new tmux tab
 
 # zsh configs and plugins
