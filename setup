@@ -5,7 +5,6 @@ sudo ./apt-packages.sh
 ./terminal.sh
 ./vim.sh
 ./tmux.sh
-./misc.sh
 
 
 if [ $# -eq 1 ]
