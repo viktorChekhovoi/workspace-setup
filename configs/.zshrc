@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions sudo web-search copydir copyfile copybuffer dirhistory history jsontools z bgnotify vscode command-not-found)
+plugins=(git zsh-autosuggestions sudo web-search copypath copyfile copybuffer dirhistory history jsontools z bgnotify vscode command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,7 +103,7 @@ export ARCHFLAGS="-arch x86_64"
 # eval `dircolors ~/.dir_colors/dircolors`
 prompt_context() {} 
 
-source /home/chekhovoiv/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/${USER}/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #disable auto correct
 unsetopt correct_all
