@@ -1,5 +1,5 @@
 printf "\n\nSetting up awesome tmux\n\n"
-touch /home/$USER/.tmux.conf
-cp configs/.tmux.conf /home/$USER/.tmux.conf
+touch ${HOME}/.tmux.conf
+cp configs/.tmux.conf ${HOME}/.tmux.conf
 printf "Copied the config file\n"
-tmux source-file /home/$USER/.tmux.conf
+tmux source-file ${HOME}/.tmux.conf
